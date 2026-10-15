@@ -142,7 +142,7 @@ jobs:
       fail-fast: false
       matrix:
         runner: [ubuntu-latest]
-        target: [winarm64] # 👈 修改：仅构建 winarm64 的基础镜像，大幅节省时间
+        target: [win64]
     steps:
       - name: Checkout
         uses: actions/checkout@v7
@@ -201,7 +201,7 @@ jobs:
       fail-fast: false
       matrix:
         runner: [ubuntu-latest]
-        target: [winarm64] # 👈 修改：仅针对 winarm64
+        target: [win64]
         variant: [nonfree, nonfree-shared] # 👈 修改：仅编译 nonfree 和 nonfree-shared 变体
     steps:
       - name: Checkout
@@ -268,7 +268,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        target: [winarm64] # 👈 修改：仅构建 winarm64
+        target: [win64]
         variant: [nonfree, nonfree-shared] # 👈 修改：仅构建 nonfree 变体
     steps:
       - name: Checkout
